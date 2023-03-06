@@ -1,0 +1,42 @@
+{% include 'base.html' %}
+{% block style %}
+<style>
+    li{
+        border-radius:1em;
+        box-shadow: 2px 2px 5px black;
+        margin-right:2em;
+    }
+    @media only screen and (max-width: 1000px) {
+        li{
+            margin-bottom:2em;
+            margin-right:0px;
+        }
+    }
+</style>
+{% endblock %}
+{% block body %}
+<body>
+    <ul class="d-flex align-items-center justify-content-center mt-5 px-0 flex-wrap" style="list-style-type:none;width:100vw;">
+        <li class="d-flex align-items-center justify-content-center flex-column px-2 py-2">
+            <h2>Original</h2>
+            <img style="width:45vh;" src="data:image/png;base64,{{img}}" alt="original_insta_dp">
+            <a class="btn text-light my-2" href="data:image/png;base64,{{img}}" download="image1" style="background-color:#650404">Download</a>
+        </li>
+        <li class="d-flex align-items-center justify-content-center flex-column px-2 py-2">
+            <h2>Level 1 Sharp</h2>
+            <img style="width:45vh;" src="data:image/png;base64,{{img1}}" alt="first_sharpened_insta_dp">
+            <a class="btn text-light my-2" href="data:image/png;base64,{{img1}}" download="image2" style="background-color:#650404">Download</a>
+        </li>
+        <li class="d-flex align-items-center justify-content-center flex-column px-2 py-2">
+            <h2>Level 2 Sharp</h2>
+            <img style="width:45vh;" src="data:image/png;base64,{{img2}}" alt="first_sharpened_insta_dp">
+            <a class="btn text-light my-2" href="data:image/png;base64,{{img2}}" download="image3" style="background-color:#650404">Download</a>
+        </li>  
+    </ul>   
+</body>
+{% endblock %}
+
+{% block script %}
+<script>
+</script>
+{% endblock %}

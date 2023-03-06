@@ -1,0 +1,30 @@
+{% include 'base.html' %}
+{% block style %}
+<style>
+
+    video{
+        box-shadow: 1px 2px 6px 3px #650404;
+        width:100%;
+        border-radius:5vh;
+    }
+    @media only screen and (min-width: 1000px) {
+  video {
+    width:80%;
+  }
+}
+</style>
+{% endblock %}
+{% block body %}
+{% if video_file %}
+    <div class="d-flex align-items-center justify-content-center flex-column vh-100 vw-100">
+        <div id="main" class="d-flex align-items-center justify-content-center flex-column px-3 py-3">
+            <video controls class="px-2 py-2">
+                <source src="/media/video/{{video_file.0}}" type="video/mp4">
+                Your browser does not support the audio element.
+            </video>
+            <a class="btn text-light my-4" download="/media/{{video_file.0}}" style="background-color:#650404">Download</a>
+        </div>
+    </div>
+{% endif %}
+{{title}}
+{% endblock %}
