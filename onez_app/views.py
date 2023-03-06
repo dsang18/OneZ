@@ -6,8 +6,6 @@ from PIL import ImageFilter
 from io import BytesIO
 import base64
 from pytube import YouTube
-import pafy 
-from bs4 import BeautifulSoup as bs
 import requests
 from django.conf import settings
 from instascrape import Reel
